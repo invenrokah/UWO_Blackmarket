@@ -179,7 +179,7 @@ function getClock() {
         container[i].querySelector(".status").innerText = "" 
       } else {
         let remaintime = ((closetime - time)/2) % 720;
-        container[i].querySelector(".status").innerText = "(OPEN -" + parseInt(remaintime/60) + ":" + String(remaintime%60).padStart(2, "0") + ")";
+        container[i].querySelector(".status").innerText = " OPEN (-" + parseInt(remaintime/60) + ":" + String(remaintime%60).padStart(2, "0") + ")";
         if(remaintime <= 120) {
         container[i].style.background = 'rgba(0,255,0,0.3)';
         }
