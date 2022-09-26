@@ -1,3 +1,7 @@
+body {
+    width: 540px;
+}
+
 input[type="checkbox"] {
     width: 24px;
     height: 24px;
