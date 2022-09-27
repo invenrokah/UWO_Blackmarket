@@ -1,5 +1,6 @@
 html, body {
-    width: 540px;
+    width: 100%;
+    min-width: 540px;
 }
 
 input[type="checkbox"] {
