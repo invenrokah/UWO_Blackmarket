@@ -172,7 +172,7 @@ function getClock() {
     let closetime = parseInt(container[i].dataset.close)*60;
     container[i].style.background = 'rgba(0,0,0,0)';
     container[i].style.color = '';  
-    if (container[i].dataset.open == 99) {container[i].style.color = 'rgba(0,0,0,0.1)';}
+    if (container[i].dataset.open == 99) {container[i].querySelector('h2').style.color = 'rgba(0,0,0,0.1)';}
     else if ((time >= opentime) && (time < closetime)) {
       container[i].style.background = 'rgba(0,255,0,0.5)';
       if (parseInt(container[i].dataset.close) == 48) {
