@@ -1,3 +1,5 @@
+const rootadjust = 4
+
 const row2 = document.querySelectorAll('.row2');
 row2.forEach((element) => {element.style.display = 'none'});
 
@@ -75,6 +77,14 @@ function reset() {
   };
   window.localStorage.clear();
   save();
+};
+
+function reset2() {
+  const checkbox = document.getElementsByName('buttons');
+  for (let i=0; i < checkbox.length; i++) {
+    checkbox[i].checked = false;
+  };
+  window.localStorage.clear();
 };
 
 function load() {
@@ -160,7 +170,7 @@ decreaseMin.onclick = () => {
 
 function getClock() {
   const date = new Date();
-  const rtc0 = (date.getSeconds() + date.getMinutes()*60 + date.getHours()*3600)*2 + parseInt(addHour.innerText, 10)*60 + parseInt(addMin.innerText, 10) +2  ;
+  const rtc0 = (date.getSeconds() + date.getMinutes()*60 + date.getHours()*3600)*2 + parseInt(addHour.innerText, 10)*60 + parseInt(addMin.innerText, 10) + parseInt(rootadjust)  ;
   const container = document.querySelectorAll(".town");
   const checkbox = document.querySelectorAll(".town input[type=checkbox]");
   for (let i=0; i < container.length; i++) {
