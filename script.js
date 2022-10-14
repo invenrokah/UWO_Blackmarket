@@ -1,4 +1,4 @@
-const rootadjust = 4
+const rootadjust = 0
 
 const row2 = document.querySelectorAll('.row2');
 row2.forEach((element) => {element.style.display = 'none'});
