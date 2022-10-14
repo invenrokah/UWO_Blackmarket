@@ -85,6 +85,7 @@ function reset2() {
     checkbox[i].checked = false;
   };
   window.localStorage.clear();
+  location.reload();
 };
 
 function load() {
